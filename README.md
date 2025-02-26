@@ -1,112 +1,50 @@
-# React Router DOM (Versão 19)
+# Ant Design
 
-## O que é o React Router DOM?
-O **React Router DOM** é uma biblioteca de roteamento para aplicações React. Ele permite criar navegação entre páginas sem a necessidade de recarregar a aplicação, tornando as Single Page Applications (SPA) mais dinâmicas e eficientes.
+Ant Design (ou AntD) é uma biblioteca de componentes para React que fornece um conjunto completo de elementos de UI prontos para uso, seguindo princípios de design consistentes. Foi desenvolvido pela Ant Group e é amplamente utilizado em aplicações empresariais e sistemas administrativos.
 
-## Principais Recursos
-- **Roteamento baseado em componentes**: Define rotas declarativamente.
-- **Rotas Aninhadas**: Permite criar hierarquia de navegação.
-- **Rotas Dinâmicas**: Utiliza parâmetros para criar URLs dinâmicas.
-- **Lazy Loading**: Carrega componentes sob demanda.
-- **Proteção de Rotas**: Implementação fácil de autenticação e autorização.
+## 📌 Características Principais
 
-## Instalação
-Para instalar a versão mais recente do React Router DOM, execute o seguinte comando no terminal:
+- Design consistente baseado no **Sistema de Design Ant**.
+- Conjunto extenso de componentes prontos para uso.
+- Suporte a temas personalizados.
+- Integração fácil com React e TypeScript.
+- Suporte para internacionalização.
+
+## 🎨 Base de Design
+
+O Ant Design é baseado nos princípios de **design sistemático**, com foco em clareza, eficiência e experiência do usuário. Ele se inspira na filosofia de **design orientado a dados**, utilizando um conjunto padronizado de diretrizes para criar interfaces coesas e amigáveis.
+
+## 🚀 Comparação com Bootstrap
+
+| Característica      | Ant Design | Bootstrap |
+|--------------------|-----------|-----------|
+| Base de Design    | UI empresarial, minimalista e flexível | Mobile-first e genérico |
+| Componentes       | Avançados e altamente personalizáveis | Básicos e modulares |
+| Estilização       | CSS-in-JS (Less) | CSS puro |
+| Integração com React | Nativa | Precisa do React-Bootstrap |
+
+## 🔧 Instalação
+
+Para instalar o Ant Design em um projeto React:
 
 ```sh
-npm install react-router-dom@latest
+npm install antd
+# ou
+yarn add antd
 ```
 
-## Configuração Básica
-Após a instalação, configure as rotas no seu projeto:
+## 📖 Exemplo de Uso
 
 ```jsx
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
+import { Button } from 'antd';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </BrowserRouter>
-  );
+  return <Button type="primary">Clique Aqui</Button>;
 }
 
 export default App;
 ```
 
-## Hooks do React Router DOM
-O React Router DOM fornece hooks poderosos para manipulação de rotas:
+## 🌍 Documentação Oficial
 
-### useNavigate
-Permite navegar entre páginas programaticamente.
-
-```jsx
-import { useNavigate } from "react-router-dom";
-
-function Home() {
-  const navigate = useNavigate();
-
-  return (
-    <button onClick={() => navigate("/about")}>
-      Ir para Sobre
-    </button>
-  );
-}
-```
-
-### useParams
-Obtém parâmetros da URL.
-
-```jsx
-import { useParams } from "react-router-dom";
-
-function Profile() {
-  const { id } = useParams();
-  return <h1>Perfil do usuário: {id}</h1>;
-}
-```
-
-### useLocation
-Retorna informações sobre a URL atual.
-
-```jsx
-import { useLocation } from "react-router-dom";
-
-function CurrentPage() {
-  const location = useLocation();
-  return <p>Você está na página: {location.pathname}</p>;
-}
-```
-
-### useRoutes
-Permite definir rotas de forma programática.
-
-```jsx
-import { useRoutes } from "react-router-dom";
-
-const routes = [
-  { path: "/", element: <Home /> },
-  { path: "/about", element: <About /> },
-];
-
-function AppRoutes() {
-  return useRoutes(routes);
-}
-```
-
-## Publicando o Projeto
-Após configurar as rotas, você pode publicar seu projeto na **Vercel** ou **Netlify**.
-
-### Publicação na Vercel
-1. Criar uma conta na [Vercel](https://vercel.com/).
-2. Conectar seu repositório GitHub.
-3. Configurar o projeto e implantar automaticamente.
-
----
-
-Agora você já pode usar o **React Router DOM 19** para criar navegação fluida e eficiente em suas aplicações React!
+Para mais detalhes, consulte a [documentação oficial](https://ant.design/).
